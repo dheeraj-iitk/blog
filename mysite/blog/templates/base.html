@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SOS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+
+    <link rel="stylesheet" href="{% static 'fonts/ionicons/css/ionicons.min.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/fontawesome/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css'%}">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+   
+  
+  </head>
+  <body>
+
+    
+    <div class="wrap">
+      <nav class="navbar navbar-expand-md  navbar-light bg-light" >
+        <img src="../static/imageshome/logo/logo_sos.png" alt="logo" width="250">
+        <div class="container">
+          
+         
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav mx-auto" >
+              <li class="nav-item" style="float:right;">
+               <a class="nav-link " href="/" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; " > HOME</h3></a>
+              </li>
+              <li class="nav-item">
+               <a class="nav-link " href="/blogs" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><b>BLOGS</b></a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+        <header role="banner">
+  
+          <div class="container logo-wrap">
+            <div class="row pt-5">
+              <div class="col-12 text-center">
+                <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
+                <h1 class="site-logo"><a href="/blogs">Writter</a></h1>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </header>
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+      
+        <footer class="site-footer">
+            <div class="container">
+              <div class="row mb-5">
+                <div class="col-md-4">
+                  <h3>About Us</h3><!--
+                  <p class="mb-4">
+                    <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid">
+                  </p>-->
+    
+                  <p><a>WRITTER</a>, the initiative by Students' Opinion Society to explore career alternatives 
+                  in the field of public policy, policy reasearch and other realted fields. </p>
+                </div>
+                          
+                <div class="col-md-6 ml-auto">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <h3>Latest Post</h3>
+                      <div class="post-entry-sidebar">
+                        <ul>
+                          <li>
+                            <a href="{{posts_list.0.get_absolute_url}}">
+                              <img src="{{posts_list.0.image.url}}" alt="Image placeholder" class="mr-4">
+                              <div class="text">
+                              
+                                <h4>{{posts_list.0.title}}</h4>
+                                <div class="post-meta">
+                                  <span class="mr-2">{{posts_list.0.created_on}} </span> &bullet;
+                                  <!--<span class="ml-2"><span class="fa fa-comments"></span> 3</span>-->
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <br>
+                          <li>
+                            <a href="{{posts_list.1.get_absolute_url}}">
+                              <img src="{{posts_list.1.image.url}}" alt="Image placeholder" class="mr-4">
+                              <div class="text">
+                                <h4>{{posts_list.1.title}}</h4>
+                                <div class="post-meta">
+                                  <span class="mr-2">{{posts_list.1.created_on}}  </span> &bullet;
+                                  <!--<span class="ml-2"><span class="fa fa-comments"></span> 3</span>-->
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    
+                    <div class="col-md-4">
+    
+                      <div class="mb-5">
+                        <h3>Quick Links</h3>
+                        <ul class="list-unstyled">
+                          <li><a href="/">About Us</a></li>
+                          <li><a href="/contacts">Contact Us</a></li>
+                        </ul>
+                      </div>
+                      
+                      <div class="mb-5">
+                        <h3>Social</h3>
+                        <ul class="list-unstyled footer-social">
+                          <li><a href="https://fb.com/sos.iitk"><span class="fa fa-facebook"></span> Facebook</a></li>
+                          <li><a href="https://www.linkedin.com/company/30244102"><span class="fa fa-youtube-play"></span> Youtube</a></li>
+                          <li><a href="https://www.youtube.com/channel/UCL6N8QXTgLIdj2SzxYhHrag/featured"><span class="fa fa-linkedin"></span> Linkedin</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <p class="small">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy; Students' Opinion Society
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+        <script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
+        <script src="{% static 'js/jquery-migrate-3.0.0.js'%}"></script>
+        <script src="{% static 'js/popper.min.js'%}"></script>
+        <script src="{% static 'js/bootstrap.min.js'%}"></script>
+        <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+        <script src="{% static 'js/jquery.waypoints.min.js'%}"></script>
+        <script src="{% static 'js/jquery.stellar.min.js'%}"></script>
+    
+        
+        <script src="{% static 'js/main.js'%}"></script>
+      </body>
+    </html>
+        <!-- Footer -->
+        
+
